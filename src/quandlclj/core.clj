@@ -1,6 +1,6 @@
 (ns quandlclj.core)
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defonce api-key (atom ""))
+
+(defn set-api-key! [key] (swap! api-key key))
+
